@@ -49,15 +49,6 @@
     }
 }
 
-- (void)removeSecretForKey:(NSString *)key
-{
-    NSDictionary * dict = [self genericLookupDictionaryForIdentifier:key];
-    OSStatus status = SecItemDelete((__bridge CFDictionaryRef)dict);
-    if (status != errSecSuccess) {
-        // TODO: error handling
-    }
-}
-
 #pragma mark - Public methods
 
 - (void)setSecret:(NSString*)secret forKey:(NSString*)key
@@ -96,6 +87,15 @@
     }
 
     return result;
+}
+
+- (void)removeSecretForKey:(NSString *)key
+{
+    NSDictionary * dict = [self genericLookupDictionaryForIdentifier:key];
+    OSStatus status = SecItemDelete((__bridge CFDictionaryRef)dict);
+    if (status != errSecSuccess) {
+        // TODO: error handling
+    }
 }
 
 @end
