@@ -18,6 +18,14 @@ NSString * secret = [[GSKeychain systemKeychain] secretForKey:@"myAccessToken"];
 NSString * secret = [[GSKeychain systemKeychain] removeSecretForKey:@"myAccessToken"];
 ```
 
+##Credits
+
+Work inspired by reading [Peeking Inside App Bundles][piab] by [Nick Arnott][na].
+
 ##License
 
-Licensed under the [UNLICENSE](http://unlicense.org/). See accompanying UNLICENSE file.
+Licensed under the [UNLICENSE][unlicense]. See accompanying UNLICENSE file.
+
+[na]: tehnoir
+[piab]: http://www.neglectedpotential.com/2012/07/peeking-inside-app-bundles/
+[unlicense]: http://unlicense.org/
