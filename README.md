@@ -17,3 +17,7 @@ NSString * secret = [[GSKeychain systemKeychain] secretForKey:@"myAccessToken"];
 // Delete a secret
 NSString * secret = [[GSKeychain systemKeychain] removeSecretForKey:@"myAccessToken"];
 ```
+
+##License
+
+Licensed under the [UNLICENSE](http://unlicense.org/). See accompanying UNLICENSE file.
