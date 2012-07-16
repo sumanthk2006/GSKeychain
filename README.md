@@ -7,12 +7,13 @@ This is currently work in progress.
 
 ##Sample usage
 
-    // Store a secret
-    [[GSKeychain systemKeychain] setSecret:@"t0ps3kr1t" forKey:@"myAccessToken"];
+```objective-c
+// Store a secret
+[[GSKeychain systemKeychain] setSecret:@"t0ps3kr1t" forKey:@"myAccessToken"];
 
-    // Fetch a secret
-    NSString * secret = [[GSKeychain systemKeychain] secretForKey:@"myAccessToken"];
+// Fetch a secret
+NSString * secret = [[GSKeychain systemKeychain] secretForKey:@"myAccessToken"];
 
-    // Delete a secret
-    NSString * secret = [[GSKeychain systemKeychain] removeSecretForKey:@"myAccessToken"];
-
+// Delete a secret
+NSString * secret = [[GSKeychain systemKeychain] removeSecretForKey:@"myAccessToken"];
+```
