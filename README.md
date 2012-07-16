@@ -18,6 +18,24 @@ NSString * secret = [[GSKeychain systemKeychain] secretForKey:@"myAccessToken"];
 NSString * secret = [[GSKeychain systemKeychain] removeSecretForKey:@"myAccessToken"];
 ```
 
+##Adding to your project
+
+###Drag and drop
+
+1. Drag `GSKeychain.h` and `GSKeychain.m` into your project
+2. Add Security.framework to **Link Binary With Libraries** in your target settings in Xcode
+3. `import "GSKeychain.h"` where appropriate
+
+GSKeychain uses ARC. If your project doesn't use ARC you could enable it for
+these files, or use GSArchive as a static library instead.
+
+###As a static library
+
+1. Download the project and build it
+2. Drag libGSKeychain.a and GSKeychain.h into your project
+3. Add Security.framework to **Link Binary With Libraries** in your target settings in Xcode
+4. `import "GSKeychain.h"` where appropriate
+
 ##Credits
 
 Work inspired by reading [Peeking Inside App Bundles][piab] by [Nick Arnott][na].
