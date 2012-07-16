@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4FF38CF15B3F513001B0EF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FF38CE15B3F513001B0EF0 /* Foundation.framework */; };
+		F4FF38D515B3F513001B0EF0 /* GSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FF38D415B3F513001B0EF0 /* GSKeychain.m */; };
+		F4FF38DD15B3F513001B0EF0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FF38DC15B3F513001B0EF0 /* SenTestingKit.framework */; };
+		F4FF38DF15B3F514001B0EF0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FF38DE15B3F514001B0EF0 /* UIKit.framework */; };
+		F4FF38E015B3F514001B0EF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FF38CE15B3F513001B0EF0 /* Foundation.framework */; };
+		F4FF38E315B3F514001B0EF0 /* libGSKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FF38CB15B3F513001B0EF0 /* libGSKeychain.a */; };
+		F4FF38E915B3F514001B0EF0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4FF38E715B3F514001B0EF0 /* InfoPlist.strings */; };
+		F4FF38EC15B3F514001B0EF0 /* GSKeychainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FF38EB15B3F514001B0EF0 /* GSKeychainTests.m */; };
+		F4FF38FC15B3F607001B0EF0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FF38FB15B3F607001B0EF0 /* Security.framework */; };
+		F4FF38FE15B3F948001B0EF0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FF38FB15B3F607001B0EF0 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4FF38E115B3F514001B0EF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4FF38C215B3F513001B0EF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4FF38CA15B3F513001B0EF0;
+			remoteInfo = GSKeychain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4FF38CB15B3F513001B0EF0 /* libGSKeychain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGSKeychain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4FF38CE15B3F513001B0EF0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F4FF38D215B3F513001B0EF0 /* GSKeychain-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GSKeychain-Prefix.pch"; sourceTree = "<group>"; };
+		F4FF38D315B3F513001B0EF0 /* GSKeychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSKeychain.h; sourceTree = "<group>"; };
+		F4FF38D415B3F513001B0EF0 /* GSKeychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSKeychain.m; sourceTree = "<group>"; };
+		F4FF38DB15B3F513001B0EF0 /* GSKeychainTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GSKeychainTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4FF38DC15B3F513001B0EF0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		F4FF38DE15B3F514001B0EF0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F4FF38E615B3F514001B0EF0 /* GSKeychainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GSKeychainTests-Info.plist"; sourceTree = "<group>"; };
+		F4FF38E815B3F514001B0EF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4FF38EA15B3F514001B0EF0 /* GSKeychainTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSKeychainTests.h; sourceTree = "<group>"; };
+		F4FF38EB15B3F514001B0EF0 /* GSKeychainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSKeychainTests.m; sourceTree = "<group>"; };
+		F4FF38FB15B3F607001B0EF0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4FF38C815B3F513001B0EF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4FF38FC15B3F607001B0EF0 /* Security.framework in Frameworks */,
+				F4FF38CF15B3F513001B0EF0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4FF38D715B3F513001B0EF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4FF38FE15B3F948001B0EF0 /* Security.framework in Frameworks */,
+				F4FF38DD15B3F513001B0EF0 /* SenTestingKit.framework in Frameworks */,
+				F4FF38DF15B3F514001B0EF0 /* UIKit.framework in Frameworks */,
+				F4FF38E015B3F514001B0EF0 /* Foundation.framework in Frameworks */,
+				F4FF38E315B3F514001B0EF0 /* libGSKeychain.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4FF38C015B3F513001B0EF0 = {
+			isa = PBXGroup;
+			children = (
+				F4FF38D015B3F513001B0EF0 /* GSKeychain */,
+				F4FF38E415B3F514001B0EF0 /* GSKeychainTests */,
+				F4FF38CD15B3F513001B0EF0 /* Frameworks */,
+				F4FF38CC15B3F513001B0EF0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4FF38CC15B3F513001B0EF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4FF38CB15B3F513001B0EF0 /* libGSKeychain.a */,
+				F4FF38DB15B3F513001B0EF0 /* GSKeychainTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4FF38CD15B3F513001B0EF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4FF38FB15B3F607001B0EF0 /* Security.framework */,
+				F4FF38CE15B3F513001B0EF0 /* Foundation.framework */,
+				F4FF38DC15B3F513001B0EF0 /* SenTestingKit.framework */,
+				F4FF38DE15B3F514001B0EF0 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4FF38D015B3F513001B0EF0 /* GSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				F4FF38D315B3F513001B0EF0 /* GSKeychain.h */,
+				F4FF38D415B3F513001B0EF0 /* GSKeychain.m */,
+				F4FF38D115B3F513001B0EF0 /* Supporting Files */,
+			);
+			path = GSKeychain;
+			sourceTree = "<group>";
+		};
+		F4FF38D115B3F513001B0EF0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4FF38D215B3F513001B0EF0 /* GSKeychain-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4FF38E415B3F514001B0EF0 /* GSKeychainTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4FF38EA15B3F514001B0EF0 /* GSKeychainTests.h */,
+				F4FF38EB15B3F514001B0EF0 /* GSKeychainTests.m */,
+				F4FF38E515B3F514001B0EF0 /* Supporting Files */,
+			);
+			path = GSKeychainTests;
+			sourceTree = "<group>";
+		};
+		F4FF38E515B3F514001B0EF0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4FF38E615B3F514001B0EF0 /* GSKeychainTests-Info.plist */,
+				F4FF38E715B3F514001B0EF0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F4FF38C915B3F513001B0EF0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F4FF38CA15B3F513001B0EF0 /* GSKeychain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4FF38EF15B3F514001B0EF0 /* Build configuration list for PBXNativeTarget "GSKeychain" */;
+			buildPhases = (
+				F4FF38C715B3F513001B0EF0 /* Sources */,
+				F4FF38C815B3F513001B0EF0 /* Frameworks */,
+				F4FF38C915B3F513001B0EF0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GSKeychain;
+			productName = GSKeychain;
+			productReference = F4FF38CB15B3F513001B0EF0 /* libGSKeychain.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F4FF38DA15B3F513001B0EF0 /* GSKeychainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4FF38F215B3F514001B0EF0 /* Build configuration list for PBXNativeTarget "GSKeychainTests" */;
+			buildPhases = (
+				F4FF38D615B3F513001B0EF0 /* Sources */,
+				F4FF38D715B3F513001B0EF0 /* Frameworks */,
+				F4FF38D815B3F513001B0EF0 /* Resources */,
+				F4FF38D915B3F513001B0EF0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4FF38E215B3F514001B0EF0 /* PBXTargetDependency */,
+			);
+			name = GSKeychainTests;
+			productName = GSKeychainTests;
+			productReference = F4FF38DB15B3F513001B0EF0 /* GSKeychainTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4FF38C215B3F513001B0EF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Goo Software Ltd";
+			};
+			buildConfigurationList = F4FF38C515B3F513001B0EF0 /* Build configuration list for PBXProject "GSKeychain" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F4FF38C015B3F513001B0EF0;
+			productRefGroup = F4FF38CC15B3F513001B0EF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4FF38CA15B3F513001B0EF0 /* GSKeychain */,
+				F4FF38DA15B3F513001B0EF0 /* GSKeychainTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4FF38D815B3F513001B0EF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4FF38E915B3F514001B0EF0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F4FF38D915B3F513001B0EF0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4FF38C715B3F513001B0EF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4FF38D515B3F513001B0EF0 /* GSKeychain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4FF38D615B3F513001B0EF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4FF38EC15B3F514001B0EF0 /* GSKeychainTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4FF38E215B3F514001B0EF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4FF38CA15B3F513001B0EF0 /* GSKeychain */;
+			targetProxy = F4FF38E115B3F514001B0EF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4FF38E715B3F514001B0EF0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4FF38E815B3F514001B0EF0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4FF38ED15B3F514001B0EF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F4FF38EE15B3F514001B0EF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4FF38F015B3F514001B0EF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GSKeychain.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GSKeychain/GSKeychain-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F4FF38F115B3F514001B0EF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GSKeychain.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GSKeychain/GSKeychain-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F4FF38F315B3F514001B0EF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GSKeychain/GSKeychain-Prefix.pch";
+				INFOPLIST_FILE = "GSKeychainTests/GSKeychainTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F4FF38F415B3F514001B0EF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GSKeychain/GSKeychain-Prefix.pch";
+				INFOPLIST_FILE = "GSKeychainTests/GSKeychainTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4FF38C515B3F513001B0EF0 /* Build configuration list for PBXProject "GSKeychain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4FF38ED15B3F514001B0EF0 /* Debug */,
+				F4FF38EE15B3F514001B0EF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4FF38EF15B3F514001B0EF0 /* Build configuration list for PBXNativeTarget "GSKeychain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4FF38F015B3F514001B0EF0 /* Debug */,
+				F4FF38F115B3F514001B0EF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4FF38F215B3F514001B0EF0 /* Build configuration list for PBXNativeTarget "GSKeychainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4FF38F315B3F514001B0EF0 /* Debug */,
+				F4FF38F415B3F514001B0EF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4FF38C215B3F513001B0EF0 /* Project object */;
+}

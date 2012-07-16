@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'GSKeychain' target in the 'GSKeychain' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

@@ -16,7 +16,7 @@
 {
     static dispatch_once_t once;
     static GSKeychain *singleton;
-    dispatch_once(&once, ^ { singleton = [[GSKeychain alloc] init]; });
+    dispatch_once(&once, ^{ singleton = [[GSKeychain alloc] init]; });
     return singleton;
 }
 
@@ -32,7 +32,12 @@
     
     // Set the specified identifier
     [dict setObject:identifierData forKey:(__bridge id)kSecAttrAccount];
-    [dict setObject:[[NSBundle mainBundle] bundleIdentifier] forKey:(__bridge id)kSecAttrService];
+
+    // Set the service identifier to the current bundle ID, if there is one
+    NSString * service = [[NSBundle mainBundle] bundleIdentifier];
+    if (service) {
+        [dict setObject:service forKey:(__bridge id)kSecAttrService];
+    }
     
     return dict;
 }
