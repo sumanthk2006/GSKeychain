@@ -9,8 +9,8 @@
 #import "GSKeychainTests.h"
 #import "GSKeychain.h"
 
-static NSString * testKey = nil;
-static NSString * testSecret = nil;
+static NSString *testKey = nil;
+static NSString *testSecret = nil;
 
 @implementation GSKeychainTests
 
@@ -35,9 +35,9 @@ static NSString * testSecret = nil;
 
 - (void)testEverything
 {
-    GSKeychain * kc = [GSKeychain systemKeychain];
+    GSKeychain *kc = [GSKeychain systemKeychain];
     
-    NSString * secret;
+    NSString *secret;
     
     // Make sure secretForKey returns nil
     secret = [kc secretForKey:testKey];
@@ -47,7 +47,7 @@ static NSString * testSecret = nil;
     secret = [kc secretForKey:testKey];
     STAssertEqualObjects(secret, testSecret, @"secretForKey: returns secret once set");
     
-    NSString * newSecret = [testSecret stringByAppendingString:@"new!"];
+    NSString *newSecret = [testSecret stringByAppendingString:@"new!"];
     [kc setSecret:newSecret forKey:testKey];
     secret = [kc secretForKey:testKey];
     STAssertEqualObjects(secret, newSecret, @"secretForKey: returns new secret after update");

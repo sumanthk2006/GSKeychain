@@ -22,10 +22,10 @@
 
 #pragma mark - Private methods
 
-- (NSMutableDictionary*)genericLookupDictionaryForIdentifier:(NSString*)identifier
+- (NSMutableDictionary *)genericLookupDictionaryForIdentifier:(NSString *)identifier
 {
-    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
-    NSData * identifierData = [identifier dataUsingEncoding:NSUTF8StringEncoding];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    NSData *identifierData = [identifier dataUsingEncoding:NSUTF8StringEncoding];
     
     // Save/retrieve the secrets we're given as generic passwords.
     [dict setObject:(__bridge id)kSecClassGenericPassword forKey:(__bridge id)kSecClass];
@@ -34,7 +34,7 @@
     [dict setObject:identifierData forKey:(__bridge id)kSecAttrAccount];
 
     // Set the service identifier to the current bundle ID, if there is one
-    NSString * service = [[NSBundle mainBundle] bundleIdentifier];
+    NSString *service = [[NSBundle mainBundle] bundleIdentifier];
     if (service) {
         [dict setObject:service forKey:(__bridge id)kSecAttrService];
     }
@@ -42,10 +42,10 @@
     return dict;
 }
 
-- (void)updateSecret:(NSString*)secret forKey:(NSString*)key
+- (void)updateSecret:(NSString *)secret forKey:(NSString *)key
 {
-    NSDictionary * query = [self genericLookupDictionaryForIdentifier:key];
-    NSMutableDictionary * attributesToUpdate = [NSMutableDictionary dictionary];
+    NSDictionary *query = [self genericLookupDictionaryForIdentifier:key];
+    NSMutableDictionary *attributesToUpdate = [NSMutableDictionary dictionary];
     [attributesToUpdate setObject:[secret dataUsingEncoding:NSUTF8StringEncoding] forKey:(__bridge id)kSecValueData];
         
     OSStatus status = SecItemUpdate((__bridge CFDictionaryRef)query, (__bridge CFDictionaryRef)attributesToUpdate);
@@ -56,9 +56,9 @@
 
 #pragma mark - Public methods
 
-- (void)setSecret:(NSString*)secret forKey:(NSString*)key
+- (void)setSecret:(NSString *)secret forKey:(NSString *)key
 {
-    NSMutableDictionary * dict = [self genericLookupDictionaryForIdentifier:key];
+    NSMutableDictionary *dict = [self genericLookupDictionaryForIdentifier:key];
     
     // Set the value we want to store
     [dict setObject:[secret dataUsingEncoding:NSUTF8StringEncoding] forKey:(__bridge id)kSecValueData];
@@ -69,10 +69,10 @@
     }
 }
 
-- (NSString*)secretForKey:(NSString*)key
+- (NSString *)secretForKey:(NSString *)key
 {
-    NSMutableDictionary * dict = [self genericLookupDictionaryForIdentifier:key];
-    NSString * result = nil;
+    NSMutableDictionary *dict = [self genericLookupDictionaryForIdentifier:key];
+    NSString *result = nil;
     
     // Only get one secret
     [dict setObject:(__bridge id)kSecMatchLimitOne forKey:(__bridge id)kSecMatchLimit];
@@ -96,7 +96,7 @@
 
 - (void)removeSecretForKey:(NSString *)key
 {
-    NSDictionary * dict = [self genericLookupDictionaryForIdentifier:key];
+    NSDictionary *dict = [self genericLookupDictionaryForIdentifier:key];
     OSStatus status = SecItemDelete((__bridge CFDictionaryRef)dict);
     if (status != errSecSuccess) {
         // TODO: error handling

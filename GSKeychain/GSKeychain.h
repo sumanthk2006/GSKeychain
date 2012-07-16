@@ -11,8 +11,8 @@
 
 + (GSKeychain *)systemKeychain;
 
-- (void)setSecret:(NSString*)secret forKey:(NSString*)key;
-- (NSString*)secretForKey:(NSString*)key;
-- (void)removeSecretForKey:(NSString*)key;
+- (void)setSecret:(NSString *)secret forKey:(NSString *)key;
+- (NSString *)secretForKey:(NSString *)key;
+- (void)removeSecretForKey:(NSString *)key;
 
 @end
