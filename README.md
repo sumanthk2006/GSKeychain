@@ -44,6 +44,6 @@ Work inspired by reading [Peeking Inside App Bundles][piab] by [Nick Arnott][na]
 
 Licensed under the [UNLICENSE][unlicense]. See accompanying UNLICENSE file.
 
-[na]: tehnoir
+[na]: http://twitter.com/tehnoir
 [piab]: http://www.neglectedpotential.com/2012/07/peeking-inside-app-bundles/
 [unlicense]: http://unlicense.org/
