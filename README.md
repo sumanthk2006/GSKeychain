@@ -12,10 +12,10 @@ This is currently work in progress.
 [[GSKeychain systemKeychain] setSecret:@"t0ps3kr1t" forKey:@"myAccessToken"];
 
 // Fetch a secret
-NSString * secret = [[GSKeychain systemKeychain] secretForKey:@"myAccessToken"];
+NSString *secret = [[GSKeychain systemKeychain] secretForKey:@"myAccessToken"];
 
 // Delete a secret
-NSString * secret = [[GSKeychain systemKeychain] removeSecretForKey:@"myAccessToken"];
+[[GSKeychain systemKeychain] removeSecretForKey:@"myAccessToken"];
 ```
 
 #Adding to your project
